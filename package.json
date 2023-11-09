@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "pnpm run --filter list-service --filter bff-server start",
-    "protoc": "pnpm run --filter list-service --filter bff-server protoc"
+    "protoc": "pnpm run --filter list-service --filter bff-server --filter client protoc"
   },
   "dependencies": {
     "@types/node": "20.8.10",

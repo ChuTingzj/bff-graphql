@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "protoc": "protoc --plugin=./node_modules/.bin/protoc-gen-ts_proto.CMD --ts_proto_out=./src/proto --ts_proto_opt=nestJs=true --proto_path=../shared/proto list.proto",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -11,9 +12,6 @@
   },
   "dependencies": {
     "@apollo/client": "^3.8.7",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "shared": "workspace:^",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
@@ -21,6 +19,10 @@
     "@vitejs/plugin-react-swc": "^3.3.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "shared": "workspace:^",
+    "ts-proto": "^1.163.0",
     "vite": "4.5.0"
   }
 }
