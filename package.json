@@ -1,0 +1,13 @@
+{
+  "name": "bff-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "pnpm run --filter list-service --filter bff-server start",
+    "protoc": "pnpm run --filter list-service --filter bff-server protoc"
+  },
+  "dependencies": {
+    "@types/node": "20.8.10",
+    "typescript": "^5.2.2"
+  }
+}

@@ -1,0 +1,5 @@
+packages:
+  - "bff-server"
+  - "shared"
+  - "client"
+  - "list-service"

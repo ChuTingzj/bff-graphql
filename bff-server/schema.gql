@@ -1,0 +1,37 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type GetListResponse_Data_ArticleInfo_AuthorInfo_Model {
+  avatarLarge: String!
+  company: String!
+  description: String!
+  userId: String!
+  userName: String!
+}
+
+type GetListResponse_Data_ArticleInfo_Model {
+  articleId: String!
+  authorUserInfo: GetListResponse_Data_ArticleInfo_AuthorInfo_Model
+  briefContent: String!
+  categoryId: String!
+  coverImage: String!
+  readTime: String!
+  title: String!
+  userId: String!
+}
+
+type GetListResponse_Data_Model {
+  itemInfo: GetListResponse_Data_ArticleInfo_Model
+  itemType: Int!
+}
+
+type ListResponseModel {
+  data: [GetListResponse_Data_Model!]!
+  errMsg: String!
+  errNo: Int!
+}
+
+type Query {
+  getList(idType: Int!, cursor: String!, limit: Int!, clientType: Int!, sortType: Int!): ListResponseModel!
+}

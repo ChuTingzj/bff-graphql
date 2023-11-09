@@ -1,0 +1,42 @@
+syntax =  "proto3";
+
+package LIST;
+
+message GetListRequest{
+  uint32 id_type = 1;
+  uint32 client_type = 2;
+  uint32 sort_type = 3;
+  string cursor = 4;
+  uint32 limit = 5;
+}
+
+message GetListResponse{
+  message Data{
+    message ArticleInfo{
+      message AuthorInfo{
+        string user_name = 1;
+        string user_id = 2;
+        string company = 3;
+        string avatar_large = 4;
+        string description = 5;
+      }
+      string article_id = 1;
+      string user_id = 2;
+      string category_id = 3;
+      string cover_image = 7;
+      string title = 9;
+      string brief_content = 10;
+      string read_time = 11;
+      AuthorInfo author_user_info = 12;
+    }
+    uint32 item_type = 1;
+    ArticleInfo item_info = 2;
+  }
+  uint32 err_no = 1;
+  string err_msg = 2;
+  repeated Data data = 3;
+}
+
+service ListService{
+  rpc GetList(GetListRequest) returns (GetListResponse){}
+}
